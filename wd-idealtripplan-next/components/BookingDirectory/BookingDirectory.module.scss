@@ -1,0 +1,46 @@
+.bookingConfirm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  margin: 20px auto;
+  width: 80%;
+  border: 2px solid lightgrey;
+  border-radius: 10px;
+  .bookingConfirmTitle {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0px;
+    border-bottom: 1px solid lightgray;
+  }
+  .bookingConfirmForm {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 50px 0px;
+    .bookinghotelInfo,
+    .bookingCustomerInfo {
+      border: 1px solid lightgray;
+      border-radius: 10px;
+      padding: 20px;
+      width: 45%;
+      min-width: 250px;
+      h4 {
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid black;
+      }
+      .hotelInfo,
+      .customerInfo {
+        .md-3 {
+          .form-control {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}

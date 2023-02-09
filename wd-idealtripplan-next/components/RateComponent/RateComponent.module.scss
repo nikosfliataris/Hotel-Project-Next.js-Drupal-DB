@@ -1,0 +1,85 @@
+.tablebody {
+  display: block;
+  border-bottom: 1px solid lightgray;
+  &:last-child {
+    border-bottom: none;
+  }
+  tr {
+    display: flex;
+    justify-content: space-between;
+    th {
+      width: 100px;
+    }
+    td {
+      border-bottom: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+      width: 100px;
+      margin-left: -30px;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto 20px auto;
+    width: 125pxs;
+    height: 45px;
+  }
+}
+// .roomdetails {
+//     padding: 50px 0px;
+//     height: 400px;
+//     border-top: 1px solid lightgray;
+
+//     .type {
+//       display: flex;
+//       flex-direction: row;
+//       align-content: flex-end;
+//       justify-content: space-around;
+//       margin: 10px 0px;
+//     }
+//     .state {
+//       display: flex;
+//       justify-content: space-between;
+//       margin: 10px 100px;
+//     }
+//     .description {
+//       display: flex;
+//       flex-direction: row;
+//       flex-wrap: wrap;
+//       justify-content: stretch;
+//       box-sizing: border-box;
+//       width: 90%;
+//       margin: 10px auto;
+//     }
+//     .price {
+//       display: flex;
+//       align-items: center;
+//       width: 90%;
+//       margin: 10px auto;
+//       flex-direction: row;
+//       justify-content: space-between;
+//       span {
+//         display: flex;
+//         margin: 10px;
+//         height: 70px;
+//         flex-direction: column;
+//         align-content: center;
+//         justify-content: space-between;
+//         &:last-child {
+//           display: flex;
+//           margin: 0px 30px;
+//         }
+//       }
+//     }
+//   }

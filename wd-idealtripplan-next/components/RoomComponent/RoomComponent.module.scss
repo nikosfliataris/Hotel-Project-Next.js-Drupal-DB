@@ -1,0 +1,86 @@
+.roomComponent {
+  border: 1px solid black;
+  padding: 20px;
+  margin: 30px 0px;
+  height: auto;
+  .roomtype {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    span {
+      margin: 10px;
+      font-size: larger;
+      font-weight: 600;
+    }
+  }
+  .rooms {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    .roomPhotos {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: space-between;
+      justify-content: space-around;
+      margin: 30px;
+
+      div {
+        margin: 10px auto;
+        overflow: hidden;
+      }
+      & img {
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+          transition: transform 3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        }
+      }
+    }
+    .tables {
+      display: flex;
+      flex-direction: column;
+      .tablehead {
+        display: flex;
+        flex-direction: row;
+        justify-content: stretch;
+        tr {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          th {
+            width: 105px;
+
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .roomssmall {
+    display: flex;
+    flex-direction: column;
+    .roomPhotossmall {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      width: 100%;
+    }
+    .roomDetailsSmall {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: center;
+      align-items: baseline;
+      justify-content: center;
+      width: 100%;
+      margin: 20px auto;
+    }
+  }
+}

@@ -1,0 +1,167 @@
+.Results {
+  padding: 100px 0;
+  position: relative;
+  .section_heading_center {
+    text-align: center;
+    padding-bottom: 30px;
+    h2 {
+      position: relative;
+      padding-bottom: 15px;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 1px;
+        background: #8b3eea;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        bottom: 0;
+      }
+    }
+  }
+  .left_side_search_area {
+    width: 100%;
+    border: 1px solid #00000030;
+    border-radius: 1rem;
+    background-color: rgb(255, 255, 255);
+    padding: 1.25rem 0.94rem;
+    margin-bottom: 1.875rem;
+    box-shadow: 0px 0px 5px 0px #cccaca;
+    .left_side_search_heading {
+      h5 {
+        border-bottom: 1px solid #00000030;
+        font-weight: 600;
+        font-size: 1.25rem;
+        padding: 1.25rem 0.94rem;
+        margin-bottom: 1.875rem;
+      }
+    }
+    .left_side_search_boxed {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      padding: 1.25rem 0.94rem;
+      margin-bottom: 1.875rem;
+    }
+  }
+  .right_side_area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    .hotels_Array {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+  }
+  .section_heading_center .section_heading_center .additionalfilters {
+    .formSubmit {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 200px;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      margin: 0px auto;
+      border: 1px solid lightgrey;
+      h4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0px auto;
+      }
+      .newfiltersearchanddatepicker {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 20px;
+        background-color: #febb02;
+        .datePicker {
+          width: 185px;
+          .customdatepicker {
+            display: flex;
+            text-align: center;
+            margin: 20px auto;
+            border-radius: 5px;
+            height: 50px;
+            border: none;
+          }
+        }
+      }
+      select {
+        width: 198px;
+      }
+      .range {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        input {
+          width: 110px;
+        }
+        input[type="number"] {
+          -moz-appearance: textfield;
+          appearance: textfield;
+          margin: 0;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+      button {
+        display: flex;
+        justify-content: center;
+        margin: 50px auto 20px auto;
+        width: 150px;
+      }
+    }
+  }
+
+  .go_top {
+    cursor: pointer;
+    color: #fff;
+    background-color: #8b3eea;
+    z-index: 4;
+    width: 40px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 50%;
+  }
+  .go_top_active {
+    position: absolute;
+    right: 20px;
+    bottom: 5%;
+    transform: translateY(50%);
+    cursor: pointer;
+    color: #fff;
+    background-color: #8b3eea;
+    z-index: 4;
+    width: 40px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    opacity: 1;
+    border-radius: 50%;
+    border: none;
+    a {
+      text-decoration: none;
+      color: whitesmoke;
+      svg {
+        transform: translateY(-30%);
+      }
+    }
+  }
+}

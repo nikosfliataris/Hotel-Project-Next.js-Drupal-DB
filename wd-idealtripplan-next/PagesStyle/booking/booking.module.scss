@@ -1,0 +1,36 @@
+.bookingform {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  width: 350px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  .bookingformComponents {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    margin: 20px auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .formtext {
+    display: flex;
+    margin: 10px;
+    width: 100%;
+    min-height: 250px;
+    textarea {
+      display: flex;
+      justify-content: center;
+      margin: 0px auto;
+      width: 100%;
+    }
+  }
+  button {
+    width: 150px;
+    margin: 20px auto;
+  }
+}

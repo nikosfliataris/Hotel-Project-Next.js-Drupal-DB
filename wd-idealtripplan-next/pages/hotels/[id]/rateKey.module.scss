@@ -1,0 +1,28 @@
+.CheckRateroom {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  align-items: center;
+  margin: 50px auto;
+  .wrap {
+    padding: 20px;
+    border: 0.5px solid lightgrey;
+    .roomdetails {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: space-around;
+      align-items: baseline;
+      margin: 0px auto;
+      .state,
+      .price,
+      .type {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        margin: 15px 0px;
+      }
+    }
+  }
+}

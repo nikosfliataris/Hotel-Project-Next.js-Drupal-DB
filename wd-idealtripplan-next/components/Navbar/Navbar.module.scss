@@ -1,0 +1,30 @@
+.container {
+  justify-content: flex-end !important;
+}
+
+.navlinks {
+  justify-content: space-between;
+  margin: 0px auto;
+  gap: 10px;
+  a {
+    text-decoration: none;
+    color: whitesmoke !important;
+    cursor: pointer;
+  }
+  .navlinkActive {
+    border-bottom: 2px solid white !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .navlinks {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    a {
+      display: flex;
+
+      justify-content: flex-end;
+    }
+  }
+}

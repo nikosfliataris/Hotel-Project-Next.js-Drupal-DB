@@ -1,0 +1,133 @@
+.tour_details_main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  margin: 0px auto;
+  position: relative;
+
+  .tour_details {
+    .tour_details_leftside_wrapper {
+      margin-top: 5rem;
+
+      .tour_details_heading_wrapper {
+        width: 80%;
+        display: flex;
+        justify-content: space-evenly;
+        position: absolute;
+        top: -150px;
+        .tour_details_top_heading,
+        .tour_package_bar_price {
+          h2,
+          h5,
+          svg,
+          p {
+            color: rgb(243, 216, 216);
+          }
+        }
+      }
+      .tour_details_img_wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+
+        .slider {
+          .carousel {
+            position: relative;
+            .slick_list {
+              img {
+                width: 100%;
+                height: 650px;
+              }
+            }
+            .carousel_buttons {
+              position: absolute;
+              top: 50%;
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              .slick_arrow_left,
+              .slick_arrow_right {
+                font-size: 20px;
+                margin: 0px 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .tour_details_boxed {
+      background: #ffffff;
+      box-shadow: -4px -5px 14px rgb(0 0 0 / 8%), 5px 8px 16px rgb(0 0 0 / 8%);
+      border-radius: 10px;
+      padding: 20px 20px;
+      margin-top: 30px;
+      .heading_theme {
+        border-bottom: 1px solid var(--main-color);
+        padding-bottom: 10px;
+        display: inline-block;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      .room_select_area {
+        .tab_content {
+          .tab_pane {
+            display: block;
+            .room_book_item {
+              border: 1px solid #dddddd;
+              margin-top: 30px;
+
+              .room_booking_right_side {
+                display: flex;
+                justify-content: space-between;
+                padding: 15px 25px 0 25px;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                li {
+                  list-style: none;
+                }
+                .room_booking_heading {
+                  h3 {
+                    font-size: 20px;
+                    font-weight: 500;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    width: 335px;
+                    padding-bottom: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .map_area {
+        width: 100%;
+        iframe {
+          width: 100%;
+          height: 300px;
+        }
+      }
+    }
+    .tour_details_right_sidebar_wrapper {
+      margin-top: 5rem;
+      .tour_detail_right_sidebar {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        min-height: 260px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        .tour_details_right_boxed {
+          background: #ffffff;
+          box-shadow: -4px -5px 14px rgb(0 0 0 / 8%),
+            5px 8px 16px rgb(0 0 0 / 8%);
+          border-radius: 10px;
+          padding: 25px 20px 35px 20px;
+        }
+      }
+    }
+  }
+}

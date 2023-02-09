@@ -1,0 +1,167 @@
+@import "react-datepicker/dist/react-datepicker";
+
+.theme_search_form {
+  margin-top: -140px;
+}
+
+@media (max-width: 1399px) {
+  #theme_search_form .container,
+  #theme_search_form .container-lg,
+  #theme_search_form .container-md,
+  #theme_search_form .container-sm,
+  #theme_search_form .container-xl {
+    max-width: 100%;
+  }
+}
+
+// .searchComponent {
+//   // display: flex;
+//   // flex-direction: column;
+//   // flex-wrap: wrap;
+//   position: absolute;
+//   top: -70px;
+//   width: 100%;
+//   min-width: 200px;
+//   margin: 20px auto;
+//   z-index: 100;
+//   .form {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     max-width: 975px;
+//     align-content: center;
+//     justify-content: center;
+//     margin: 0px auto;
+//     background-color: whitesmoke;
+//     border: 2px solid lightgray;
+//     border-radius: 10px;
+//     box-shadow: 0px 6px 30px 0px gray;
+//     .choise {
+//       display: flex;
+//       flex-direction: row;
+//       flex-wrap: wrap;
+//       justify-content: center;
+//       align-items: center;
+//       margin: 0px auto;
+//       width: 100%;
+//       min-width: 200px;
+//       .destination,
+//       .datepicker,
+//       .members,
+//       .searchformbutton {
+//         padding: 5px;
+//       }
+//       .destination {
+//         height: 94px;
+//         z-index: 100;
+//         div {
+//           input {
+//             border-radius: 5px;
+//             background-color: rgb(235, 230, 230);
+//             cursor: pointer;
+//           }
+//         }
+//         .show {
+//           background-color: whitesmoke;
+//           border-bottom-left-radius: 5px;
+//           border-bottom-right-radius: 5px;
+//           border: 1px solid lightgray;
+//           margin-top: -16px;
+//           height: auto;
+//           cursor: pointer;
+//           .resultsearch {
+//             display: flex;
+//             flex-direction: column;
+//             width: 148px;
+//             height: auto;
+//             .resultdestinations {
+//               display: flex;
+//               flex-direction: column;
+//             }
+//           }
+//           .noresult {
+//             display: flex;
+//             width: 148px;
+//             min-height: 43px;
+//             p {
+//               display: flex;
+//               width: 90%;
+//               justify-content: center;
+//               align-items: stretch;
+//               align-content: space-between;
+//               margin: -5px auto;
+//             }
+//           }
+//         }
+//       }
+//       .datepicker {
+//         width: 180px;
+//         height: 94px;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         margin: 5px 15px 0px 0px;
+//         input {
+//           border-radius: 5px;
+//           height: 48px;
+//           outline: none;
+//           border: none;
+//           border-bottom: 1px solid grey;
+//           background-color: rgb(235, 230, 230);
+//           cursor: pointer;
+//         }
+//         button {
+//           padding: 0px 0px 0px 5px;
+//           cursor: pointer;
+//         }
+//       }
+//       .members {
+//         display: flex;
+//         flex-direction: row;
+//         flex-wrap: wrap;
+//         width: 100%;
+//         max-width: 360px;
+//         justify-content: space-evenly;
+//         div {
+//           width: 100px;
+//           input {
+//             width: 100px;
+//             background-color: rgb(235, 230, 230);
+//             border-radius: 5px;
+//             cursor: pointer;
+//           }
+//         }
+//       }
+//       .searchformbutton {
+//         display: flex;
+//         justify-content: center;
+//         width: 150px;
+//         align-items: center;
+//         button {
+//           width: 120px;
+//           cursor: pointer;
+//         }
+//       }
+//     }
+//   }
+// }
+// @media (max-width: 992px) {
+//   .searchComponent {
+//     top: -120px;
+//   }
+// }
+// @media (max-width: 767px) {
+//   .searchComponent {
+//     top: -200px;
+//   }
+// }
+// @media (max-width: 658px) {
+//   .searchComponent {
+//     top: -250px;
+//   }
+// }
+// @media (max-width: 575px) {
+//   .searchComponent {
+//     top: -50px;
+//   }
+// }

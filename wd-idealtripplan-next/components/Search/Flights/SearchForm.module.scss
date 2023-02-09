@@ -1,0 +1,181 @@
+.theme_search_form_area {
+  background: #ffffff;
+  box-shadow: 4px 14px 28px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 30px 30px 20px 30px;
+  position: relative;
+  .tab_content {
+    .form_places {
+      margin: 10px auto;
+      .flight_Search_boxed {
+        height: 115px;
+        background: #8b3eea17;
+        padding: 10px 10px 10px 20px;
+        border-radius: 10px;
+        position: relative;
+        p {
+          font-size: 14px;
+        }
+        input {
+          border: none;
+          background: transparent;
+          font-weight: 500;
+          height: 35px;
+          padding: 0;
+          outline: none;
+        }
+
+        span {
+          display: block;
+          font-size: 12px;
+          padding-top: 5px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+      .form_search_date {
+        height: 115px;
+        .date_flex_area {
+          display: flex;
+          justify-content: space-around;
+          .Journey_date {
+            width: 90px;
+            .datepicker {
+              width: 90px !important;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .datepicker_input {
+              border-radius: 5px;
+              width: 90px !important;
+              height: 40px;
+              outline: none;
+              border: none;
+              font-size: 18px;
+              font-weight: 600;
+              color: #080808;
+            }
+            p {
+              font-size: 14px;
+            }
+            input {
+              border: none;
+              background: transparent;
+              font-weight: 500;
+              height: 35px;
+              padding: 0;
+            }
+            span {
+              display: block;
+              font-size: 12px;
+              padding-top: 5px;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+      .dropdown_passenger_area {
+        height: 115px;
+        button {
+          border: none;
+          background: transparent;
+          padding: 0;
+          font-size: 18px;
+          font-weight: 500;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          &::after {
+            visibility: hidden;
+          }
+        }
+
+        .dropdown_passenger_info {
+          margin: 35px 0px 0px -113px;
+          min-width: 250px;
+          .traveller_calulate_persons {
+            .passengers {
+              .passengers_types {
+                padding-top: 15px;
+                .passengers_type {
+                  display: flex;
+                  align-items: center;
+                  padding: 8px 16px;
+                  justify-content: space-between;
+                  .text {
+                    align-items: center;
+                    display: flex;
+                    margin: auto 0px;
+                    .type_label {
+                      p {
+                        font-size: 16px;
+                        font-family: "Lucida Sans", "Lucida Sans Regular",
+                          "Lucida Grande", "Lucida Sans Unicode", Geneva,
+                          Verdana, sans-serif;
+                        color: #4c4c4c;
+                        margin: auto 0px;
+                        font-weight: 600;
+                      }
+                    }
+                  }
+                  .button_set {
+                    button {
+                      font-size: 12px;
+                      color: #4c4c4c;
+                      border: 1px solid #d8d8d8;
+                      width: 20px;
+                      height: 20px;
+                      display: inline-flex;
+                      svg {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                      }
+                    }
+                    .count {
+                      display: flex;
+                      width: 24px;
+                      display: inline-block;
+                      font-size: 20px;
+                      height: 30px;
+                      font-weight: 600;
+                      text-align: center;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .dropdown-menu {
+          padding: 15px 20px;
+          font-size: 1rem;
+          color: #212529;
+          text-align: left;
+          list-style: none;
+          background-color: #fff;
+          background-clip: padding-box;
+          border: 1px solid rgba(0, 0, 0, 0.15);
+          border-radius: 0.25rem;
+        }
+      }
+    }
+    .top_form_search_button {
+      display: flex;
+      justify-content: center;
+      margin: 20px auto;
+      .formSubmit_btn {
+        width: 150px;
+        height: 40px;
+        text-align: center;
+        border-radius: 10px;
+      }
+    }
+  }
+}

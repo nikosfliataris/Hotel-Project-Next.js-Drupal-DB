@@ -1,0 +1,88 @@
+.header {
+  background-image: url("./../../public/logo.jpg");
+  height: 80vh;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .headerWrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    .headersUpper {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      height: 40px;
+      align-items: baseline;
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px;
+        height: 100%;
+        .socials {
+          height: 25px;
+
+          .links {
+            display: flex;
+            list-style: none;
+            gap: 10px;
+            svg {
+              font-size: 12px;
+              font-weight: 600;
+              color: white;
+            }
+          }
+        }
+        .phone {
+          display: flex;
+          height: 25px;
+          align-items: baseline;
+          gap: 5px;
+          margin-top: 3px;
+          svg,
+          p {
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+          }
+        }
+        .email {
+          display: flex;
+          height: 25px;
+          svg,
+          p {
+            font-size: 13px;
+            font-weight: 600;
+            color: white;
+          }
+        }
+      }
+      .userInterface {
+        display: flex;
+        gap: 20px;
+      }
+    }
+    .headerLower {
+      display: flex;
+      justify-content: space-between;
+      height: 65px;
+      position: sticky;
+      top: 0;
+      .logo {
+        flex: 0.25;
+        justify-content: flex-end;
+        display: flex;
+      }
+      .navlinks {
+        flex: 0.75;
+      }
+    }
+  }
+}

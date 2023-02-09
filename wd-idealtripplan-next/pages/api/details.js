@@ -1,0 +1,17 @@
+import fetcher from "../../functions/fetcher";
+
+export default async function handler(req, res) {
+  const token =
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjM5YmQ1ZDVmYmIwMjg3N2I0NThlNjcwNDE4MWUxODljYzkzYjAyOTQ3ODFlOTA3Njg1Y2ZkMDgxMjc2ZmY1NzAwZGNhY2QwOGY1ZTcyOTAzIn0.eyJhdWQiOiI5YjEwN2Q1YS02NDAzLTQ1ODktYmMyMy0yOWM5YjBkZGMxYWUiLCJqdGkiOiIzOWJkNWQ1ZmJiMDI4NzdiNDU4ZTY3MDQxODFlMTg5Y2M5M2IwMjk0NzgxZTkwNzY4NWNmZDA4MTI3NmZmNTcwMGRjYWNkMDhmNWU3MjkwMyIsImlhdCI6MTY1NzcwMTUyMCwibmJmIjoxNjU3NzAxNTIwLCJleHAiOjE2NTg5MTExMjAsInN1YiI6IjMiLCJzY29wZXMiOlsiYXV0aGVudGljYXRlZCIsIm5leHQiXX0.WbXZQyleggF82aVUksC1jspZr6AFuVjEGW6atqnGsRWZ2u4p7dHvsJALzUNNWZxKxdsttr4klJuZTGnWinC_KUigw5GdYvIl1WB4cKkit9UYwJtnRJx3gZ8DNnCmH1ZA3g_cykRC4etExon2DW5fIYeqxtL4RmeDMwtVrU4keZ-FR_TkanpWqfIa6IBCuk4cfgC_m8bdVtIMix9B7ojp9nIBPgB7ywBMMqq4c396F6ksZE3t_bJ9VqnqZ7jfZ6XTGVSYG6HtiT2UFKI-BQCY-V2UhVOpbqlosxQgVsBEa-anLffZqhXSqjqkheDSR-zleBdUdAin9QOsYYw7hIthizdU4eJskZSHmCOVKcFeGqNzbpDn3YwicD3gfZ2gcHQPNNB8SSRJMJ2CPnPpAVOZWTXt5is0sbx0Qgbc1-g-7FCH6QYuipNEx8kcMfywdQu2SJ8XCFOC_UjNGET3EP-FWIhDpdDeCVspJvRIQtdLCh1Thci6pnYlQOB_B6Obz8RIKwt7UlzZA4gQxmUGqsPXZRS_nKoxVRep9FvQDuihMbOosillskvrYJy5djPWGM2eCPiCEVfY7Ue3tMMjyA3srq552KCNEzpcu7GoUVORqNSHNfD-aOfKijf0xBuK91LepO7ziQasevcaX8mkTkHnoBH4tj2DYJ6PUE3XM8Je80E";
+
+  const requestid = await fetcher(req.body.url, {
+    method: "GET",
+    headers: {
+      token,
+      Accept: "application/vnd.api+json",
+      "Content-Type": "application/vnd.api+json",
+    },
+  });
+
+  res.status(200).send(requestid);
+}

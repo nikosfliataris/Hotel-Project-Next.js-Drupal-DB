@@ -1,0 +1,14 @@
+.CustomePagination {
+  display: flex;
+  justify-content: center;
+}
+.paginationList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+@media only screen and (max-width: 480px) {
+  .CustomePagination {
+    width: auto;
+  }
+}

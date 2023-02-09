@@ -1,0 +1,14 @@
+.Directory {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  .directory {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+}

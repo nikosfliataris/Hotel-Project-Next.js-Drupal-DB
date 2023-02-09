@@ -1,0 +1,22 @@
+.footer {
+  position: relative;
+  width: 100%;
+  background-color: lightgray;
+  height: 70px;
+  bottom: -110px;
+  border-top: 1px solid black;
+  .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .desc {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70px;
+      .title {
+        font-size: 20px;
+      }
+    }
+  }
+}
