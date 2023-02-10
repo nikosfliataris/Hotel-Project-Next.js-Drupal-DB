@@ -2,13 +2,9 @@ import { useRouter } from "next/router";
 import { useEffect, useMemo, useState } from "react";
 import style from "./Result.module.scss";
 import Select from "./../AdditionalFilters/Select/Select";
-import SearchInput from "./../SearchInput/SearchInput";
-import Button from "./../Button/Button";
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import fetcher from "./../../functions/fetcher";
 import Paginations from "../Pagination/Paginations";
-import Spinner from "../Spinner/Spinner";
 import DateISOFormat from "../Datepicker/DateISOFormat";
 import ResultFormSearch from "../ResultFormSearch/ResultFormSearch";
 import HotelComponent from "../HotelComponent/HotelComponent";
@@ -151,7 +147,7 @@ function Result({ Drupal_Return }) {
     if (typeof window !== "undefined") {
       FetchAvailabilityDataFromHotelApiPostRequest();
     }
-  }, [router.asPath]);
+  }, [SelectedAccommodations, SelectedBoards, Payment]);
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -184,7 +180,7 @@ function Result({ Drupal_Return }) {
   let currentPage = parseInt(query.page);
   let offset = parseInt(query.page) * 8;
   const [offsets, setOffsets] = useState(offset + 8);
-  const [paginated, setPaginated] = useState();
+  const [paginated, setPaginated] = useState(Hotels?.hotels.slice(0, 8));
   const [loadingPagination, setLoadingPagination] = useState(true);
   const PaginatedData = () => {
     setLoadingPagination(true);
@@ -192,7 +188,7 @@ function Result({ Drupal_Return }) {
     setOffsets((offset += 8));
     setLoadingPagination(false);
   };
-
+  console.log(paginated);
   const GetHotelInfoFromDrupalAfterAvailability = async () => {
     setHotelDetaillsLoading(true);
     for (let i = 0; i < paginated?.length; i++) {

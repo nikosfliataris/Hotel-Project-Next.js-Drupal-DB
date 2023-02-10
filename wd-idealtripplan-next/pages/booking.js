@@ -6,11 +6,13 @@ import Select from "./../components/AdditionalFilters/Select/Select";
 import Spinner from "../components/Spinner/Spinner";
 import BookingDirectory from "../components/BookingDirectory/BookingDirectory";
 import { useRouter } from "next/router";
+
 const url = require("url");
 function booking() {
   const router = useRouter();
   const url_parts = url.parse(router.asPath, true);
   const { query, pathname } = url_parts;
+  console.log(query);
   const [adultname, setAdultsName] = useState([]);
   const [message, setMessage] = useState("");
   const [BookingConfirm, setBookingConfirm] = useState([]);
@@ -33,7 +35,10 @@ function booking() {
     "DISCOVER",
   ]);
   const [selectedCardType, setselectedCardType] = useState();
-
+  let RateKeys = [];
+  for (let i = 0; i < parseInt(query.rooms); i++) {
+    RateKeys.push({ rateKey: query.ratekey });
+  }
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(false);
@@ -49,11 +54,7 @@ function booking() {
                   name: adultname.Name,
                   surname: adultname.SurName,
                 },
-                rooms: [
-                  {
-                    rateKey: query.ratekey,
-                  },
-                ],
+                rooms: RateKeys,
                 clientReference: "IntegrationAgency",
                 remark: message,
                 paymentData: {
@@ -75,11 +76,7 @@ function booking() {
                   name: adultname.Name,
                   surname: adultname.SurName,
                 },
-                rooms: [
-                  {
-                    rateKey: query.ratekey,
-                  },
-                ],
+                rooms: RateKeys,
                 clientReference: "IntegrationAgency",
                 remark: message,
               },
@@ -114,6 +111,7 @@ function booking() {
             className={`${style.bookingform} container`}
           >
             <h4>Booking Info</h4>
+
             <div className={style.bookingformComponents}>
               <SearchInput
                 style={{ width: "100%" }}

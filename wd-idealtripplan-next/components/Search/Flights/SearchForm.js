@@ -12,6 +12,8 @@ function SearchForm({
   handleSubmit,
   setSelectedDestination,
   selectedDestination,
+  results,
+  setDestination,
 }) {
   const time = new Date();
   const [startDate, setStartDate] = useState(new Date());
@@ -52,6 +54,28 @@ function SearchForm({
                           onClick={() => setSelectedDestination()}
                         />
                       </div>
+                      {results && (
+                        <div className={style.result_search}>
+                          {results?.map((result) => (
+                            <div
+                              className={style.result_item}
+                              key={result.id}
+                              onClick={() => {
+                                setSearchInput((prev) => {
+                                  return {
+                                    ...prev,
+                                    destination: result.attributes.field_name,
+                                  };
+                                });
+                                setSelectedDestination(result);
+                                setDestination("");
+                              }}
+                            >
+                              {result.attributes.field_name}
+                            </div>
+                          ))}
+                        </div>
+                      )}
                     </div>
                     <div
                       className={`col-lg-4 col-md-6 col-sm-12 col-12 ${style.form_places}`}

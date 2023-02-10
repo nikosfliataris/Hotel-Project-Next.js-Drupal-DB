@@ -54,10 +54,9 @@ function BookingDirectory({ HotelData, BookingConfirm, Key }) {
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label>Rooms</Form.Label>
-                <Form.Control
-                  value={BookingConfirm?.hotel.rooms[0].name}
-                  disabled
-                />
+                {BookingConfirm?.hotel.rooms.map((index) => (
+                  <Form.Control value={index.name} disabled />
+                ))}
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label>CheckIn Date</Form.Label>

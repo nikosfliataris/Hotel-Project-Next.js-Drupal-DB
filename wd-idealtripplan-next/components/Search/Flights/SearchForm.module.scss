@@ -34,6 +34,15 @@
           white-space: nowrap;
         }
       }
+      .result_search {
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: #f7f4f4;
+        .result_item {
+          margin-left: 10px;
+          cursor: pointer;
+        }
+      }
       .form_search_date {
         height: 115px;
         .date_flex_area {

@@ -1,14 +1,10 @@
 import { useEffect, useState } from "react";
-import Form from "react-bootstrap/Form";
 import { useRouter } from "next/router";
-import DatePicker from "react-datepicker";
 require("react-datepicker/dist/react-datepicker.css");
 import "react-datepicker/dist/react-datepicker.css";
-import SearchInput from "../SearchInput/SearchInput";
 import style from "./Search.module.scss";
 import Dateformat from "../../classes/DateFormat";
 import SearchForm from "./Flights/SearchForm";
-import { FaMinus, FaPlus } from "react-icons/fa";
 
 const url = require("url");
 function Search() {
@@ -93,29 +89,9 @@ function Search() {
               handleSubmit={handleSubmit}
               setSelectedDestination={setSelectedDestination}
               selectedDestination={selectedDestination}
+              results={Destination}
+              setDestination={setDestination}
             />
-            {Destination && (
-              <div className={style.result_search}>
-                {Destination?.map((dest) => (
-                  <div
-                    className={style.result_item}
-                    key={dest.id}
-                    onClick={() => {
-                      setSearchInput((prev) => {
-                        return {
-                          ...prev,
-                          destination: dest.attributes.field_name,
-                        };
-                      });
-                      setSelectedDestination(dest);
-                      setDestination("");
-                    }}
-                  >
-                    {dest.attributes.field_name}
-                  </div>
-                ))}
-              </div>
-            )}
           </div>
         </div>
       </div>

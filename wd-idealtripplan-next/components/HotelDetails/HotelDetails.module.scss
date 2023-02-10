@@ -75,9 +75,8 @@
           .tab_pane {
             display: block;
             .room_book_item {
-              border: 1px solid #dddddd;
-              margin-top: 30px;
-
+              // border: 1px solid #dddddd;
+              // margin-top: 30px;
               .room_booking_right_side {
                 display: flex;
                 justify-content: space-between;
@@ -85,17 +84,25 @@
                 flex-direction: column;
                 flex-wrap: nowrap;
                 li {
+                  width: 100%;
                   list-style: none;
+                  border: 1px solid black;
+                  border-radius: 10px;
+                  margin: 10px auto;
                 }
                 .room_booking_heading {
-                  h3 {
-                    font-size: 20px;
-                    font-weight: 500;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    width: 335px;
-                    padding-bottom: 10px;
+                  .room_book_header {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    margin: 10px auto;
+                    h3 {
+                      font-size: 20px;
+                      font-weight: 500;
+                      white-space: nowrap;
+                      padding-bottom: 10px;
+                      border-bottom: 2px solid black;
+                    }
                   }
                 }
               }

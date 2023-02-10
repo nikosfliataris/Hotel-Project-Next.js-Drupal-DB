@@ -1,9 +1,7 @@
-import { useRef, useState, useEffect } from "react";
+import { useState } from "react";
 import style from "./HotelDetails.module.scss";
-import RoomComponent from "../RoomComponent/RoomComponent";
-import { Button } from "react-bootstrap";
 import Loader from "./../Loader/Loader";
-import { BsArrowLeft, BsArrowRight, BsCircleFill } from "react-icons/bs";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { BiMap } from "react-icons/bi";
 import RateComponent from "../RateComponent/RateComponent";
 function HotelDetails({ details, ResponseHotel }) {
@@ -66,9 +64,6 @@ function HotelDetails({ details, ResponseHotel }) {
   const PointsOfInterest = details.included?.filter(
     (index) => index.type === "node--interestpoints"
   );
-
-  // if (Load === false) return "Loading...";
-
   return (
     <section className={style.tour_details_main} key={field_code}>
       <div className={`${style.tour_details} col-12`}>
@@ -141,7 +136,10 @@ function HotelDetails({ details, ResponseHotel }) {
                               className={style.room_booking_heading}
                               key={room.code}
                             >
-                              <h3>{room.name}</h3>
+                              <div className={style.room_book_header}>
+                                <h3>{room.name}</h3>
+                              </div>
+
                               {room.rates.map((rate) => (
                                 <RateComponent
                                   {...rate}
