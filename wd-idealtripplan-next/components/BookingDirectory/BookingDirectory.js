@@ -14,6 +14,7 @@ function BookingDirectory({ HotelData, BookingConfirm, Key }) {
                 <Form.Label>Hotel Name</Form.Label>
                 <Form.Control value={BookingConfirm?.hotel.name} disabled />
               </Form.Group>
+
               <Form.Group className="mb-3">
                 <Form.Label>Category</Form.Label>
                 <Form.Control
@@ -21,16 +22,27 @@ function BookingDirectory({ HotelData, BookingConfirm, Key }) {
                   disabled
                 />
               </Form.Group>
-
               <Form.Group className="mb-3">
-                <Form.Label>Booking Status</Form.Label>
+                <Form.Label>Destination</Form.Label>
                 <Form.Control
-                  value={BookingConfirm?.hotel.rooms[0].status}
+                  value={BookingConfirm?.hotel.destinationName}
                   disabled
                 />
               </Form.Group>
-              {HotelData.included
-                ?.filter((index) => index.type === "node--phones")
+              {HotelData?.included
+                ?.filter((index) => index.type === "node--address")
+                .map((int) => (
+                  <Form.Group className="mb-3">
+                    <Form.Label>Address</Form.Label>
+                    <Form.Control
+                      value={int.attributes.field_content[0]}
+                      disabled
+                    />
+                  </Form.Group>
+                ))}
+
+              {HotelData?.included
+                ?.filter((index) => index.type === "node--phones_number")
                 .map((int) => (
                   <Form.Group className="mb-3">
                     <Form.Label>{int.attributes.field_phonetype}</Form.Label>

@@ -4,7 +4,7 @@ import { SocialLinks } from "./../../utils/HeaderLinks";
 import { HiOutlineMail } from "react-icons/hi";
 import { BiLogOut, BiLogIn } from "react-icons/bi";
 import { BsFillTelephoneInboundFill } from "react-icons/bs";
-import { cross } from "./../../assets/images/cross.png";
+import { logo } from "./../../assets/images/logo.png";
 import Navbar from "../Navbar/Navbar";
 function Header() {
   return (
@@ -60,7 +60,7 @@ function Header() {
         <div className={style.headerLower}>
           <div className={style.logo}>
             <img
-              src="https://andit.co/projects/html/and-tour/demo/assets/img/logo.png"
+              src="https://andit.co/projects/html/and-tour/assets/img/logo.png"
               alt="logo"
             />
           </div>

@@ -188,7 +188,6 @@ function Result({ Drupal_Return }) {
     setOffsets((offset += 8));
     setLoadingPagination(false);
   };
-  console.log(paginated);
   const GetHotelInfoFromDrupalAfterAvailability = async () => {
     setHotelDetaillsLoading(true);
     for (let i = 0; i < paginated?.length; i++) {
@@ -279,7 +278,7 @@ function Result({ Drupal_Return }) {
         <div className="row">
           <div className="col-12 ">
             <div className={style.section_heading_center}>
-              <h2>38 hotel found</h2>
+              <h2>{Hotels?.total} hotel found</h2>
             </div>
           </div>
         </div>
@@ -348,15 +347,17 @@ function Result({ Drupal_Return }) {
             </div>
           </div>
           <div className="col-lg-9">
-            <div className={style.right_side_area}>
-              <div className={style.hotels_Array}>
-                {paginated?.map((hotel, i) => (
-                  <HotelComponent
-                    {...hotel}
-                    key={hotel.code}
-                    details={HotelDetails[i]?.data[0]?.field_images[0]}
-                  />
-                ))}
+            <div className="row">
+              <div className="col-12">
+                <div className={style.result_hotel_components_wrapper}>
+                  {paginated?.map((hotel, i) => (
+                    <HotelComponent
+                      {...hotel}
+                      key={hotel.code}
+                      details={HotelDetails[i]?.data[0]?.field_images[0]}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>

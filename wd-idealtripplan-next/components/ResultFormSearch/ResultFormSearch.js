@@ -12,7 +12,7 @@ function ResultFormSearch({
   const [reduce, setReduce] = useState(true);
   return (
     <div className={style.tour_search_type} key={stateTypes[0].id}>
-      <p>
+      <p className={style.filter_header}>
         {filter_Header}{" "}
         {reduce ? (
           <BsArrowDown onClick={() => setReduce(false)} />

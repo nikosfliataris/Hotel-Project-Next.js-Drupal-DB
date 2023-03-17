@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 import style from "./HotelDetails.module.scss";
 import Loader from "./../Loader/Loader";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { BiMap } from "react-icons/bi";
 import RateComponent from "../RateComponent/RateComponent";
+import { useRouter } from "next/router";
+const url = require("url");
 function HotelDetails({ details, ResponseHotel }) {
   if (!details) {
     return (
@@ -21,7 +24,9 @@ function HotelDetails({ details, ResponseHotel }) {
     field_web,
     field_code,
   } = details.data[0].attributes;
-  console.log(details, ResponseHotel);
+  const router = useRouter();
+  const url_parts = url.parse(router.asPath, true);
+  const { query, pathname } = url_parts;
   const [ImageNumber, setImageNumber] = useState(0);
   function handleClick(direction) {
     if (direction === "Previous") {
@@ -64,6 +69,20 @@ function HotelDetails({ details, ResponseHotel }) {
   const PointsOfInterest = details.included?.filter(
     (index) => index.type === "node--interestpoints"
   );
+  function handleBooking(e, rate, adults, children, paymentType) {
+    console.log(e, rate);
+    e.preventDefault();
+    router.push({
+      pathname: `/booking`,
+      query: {
+        adults: adults,
+        children: children,
+        RoomId: 1,
+        ratekey: rate,
+        payment: paymentType,
+      },
+    });
+  }
   return (
     <section className={style.tour_details_main} key={field_code}>
       <div className={`${style.tour_details} col-12`}>
@@ -131,23 +150,31 @@ function HotelDetails({ details, ResponseHotel }) {
                     <div className={style.tab_pane}>
                       <div className={style.room_book_item}>
                         <ul className={style.room_booking_right_side}>
-                          {ResponseHotel[0]?.rooms?.map((room) => (
-                            <li
-                              className={style.room_booking_heading}
-                              key={room.code}
-                            >
-                              <div className={style.room_book_header}>
-                                <h3>{room.name}</h3>
-                              </div>
+                          {ResponseHotel[0]?.rooms.map((room, i) => {
+                            let tempImages = details.included.filter(
+                              (index) =>
+                                index.attributes.field_roomcodeimage ==
+                                room.code
+                            );
+                            return (
+                              <li
+                                className={style.room_booking_heading}
+                                key={i}
+                              >
+                                <div className={style.room_book_header}>
+                                  <h3>{room.name}</h3>
+                                </div>
 
-                              {room.rates.map((rate) => (
                                 <RateComponent
-                                  {...rate}
-                                  roomId={ResponseHotel.code}
+                                  rates={room.rates}
+                                  Images={tempImages}
+                                  roomId={room.code}
+                                  booking={handleBooking}
+                                  key={i}
                                 />
-                              ))}
-                            </li>
-                          ))}
+                              </li>
+                            );
+                          })}
                         </ul>
                       </div>
                     </div>

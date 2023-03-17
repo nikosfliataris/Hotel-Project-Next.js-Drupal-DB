@@ -1,0 +1,25 @@
+.tour_search_type {
+  margin-bottom: 2rem;
+  .filter_header {
+    display: flex;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-style: italic;
+    color: rgb(74, 197, 197);
+  }
+  .form_check {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    .form_check_input {
+      margin-right: 0.8rem;
+    }
+    .form_check_label {
+      font-size: 0.9rem;
+      font-weight: 700;
+      font-style: italic;
+      color: rgb(74, 197, 197);
+    }
+  }
+}

@@ -88,7 +88,6 @@ function SearchForm({
                             <DatePicker
                               startDate={startDate}
                               onChange={(update) => {
-                                console.log(update);
                                 setStartDate(update);
                                 setSearchInput((old) => {
                                   let checkIn = Dateformat(update);
@@ -117,7 +116,6 @@ function SearchForm({
                               endDate={endDate}
                               startDate={startDate}
                               onChange={(update) => {
-                                console.log(update);
                                 setEndDate(update);
                                 setSearchInput((old) => {
                                   let checkOut = Dateformat(update);

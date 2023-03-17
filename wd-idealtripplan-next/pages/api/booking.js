@@ -14,11 +14,19 @@ export default async function handler(req, res) {
     "Content-Type": "application/json",
   };
   if (req.method === "POST") {
-    const Res = await fetcher(`${process.env.NEXT_PUBLIC_HotelBeds}/bookings`, {
-      method: req.method,
-      headers: HotelBedsHeader,
-      body: req.body,
-    });
-    res.status(200).send(Res);
+    try {
+      const Res = await fetcher(
+        `${process.env.NEXT_PUBLIC_HotelBeds}/bookings`,
+        {
+          method: req.method,
+          headers: HotelBedsHeader,
+          body: req.body,
+        }
+      );
+
+      res.status(200).send(Res);
+    } catch (error) {
+      console.log(error);
+    }
   }
 }

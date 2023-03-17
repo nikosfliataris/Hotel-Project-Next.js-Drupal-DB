@@ -12,7 +12,7 @@ function booking() {
   const router = useRouter();
   const url_parts = url.parse(router.asPath, true);
   const { query, pathname } = url_parts;
-  console.log(query);
+  console.log(query.ratekey);
   const [adultname, setAdultsName] = useState([]);
   const [message, setMessage] = useState("");
   const [BookingConfirm, setBookingConfirm] = useState([]);
@@ -36,8 +36,8 @@ function booking() {
   ]);
   const [selectedCardType, setselectedCardType] = useState();
   let RateKeys = [];
-  for (let i = 0; i < parseInt(query.rooms); i++) {
-    RateKeys.push({ rateKey: query.ratekey });
+  for (let i = 0; i < query.ratekey.length; i++) {
+    RateKeys.push({ rateKey: query.ratekey[i] });
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -94,7 +94,7 @@ function booking() {
       {
         method: "GET",
         headers: {
-          url: `https://trip.webdimension.gr/jsonapi/node/hotel?include=field_address,field_phones&filter[field_simple_code]=${data["hotel"].code}`,
+          url: `https://dev-fliataris-app.pantheonsite.io/jsonapi/node/hotel?filter[field_code]=${data["hotel"].code}&include=field_address,field_phones_number`,
         },
       }
     );

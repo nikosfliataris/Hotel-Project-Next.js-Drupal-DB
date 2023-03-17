@@ -22,7 +22,6 @@ function Search() {
   const [selectedDestination, setSelectedDestination] = useState();
   const [handleloading, setHandleLoading] = useState(false);
   const [passengersShow, setPassengersShow] = useState(false);
-  console.log(selectedDestination);
   // <- //
   //-> Route setUp for url query request
   const router = useRouter();

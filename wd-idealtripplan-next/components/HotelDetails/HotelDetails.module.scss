@@ -75,8 +75,6 @@
           .tab_pane {
             display: block;
             .room_book_item {
-              // border: 1px solid #dddddd;
-              // margin-top: 30px;
               .room_booking_right_side {
                 display: flex;
                 justify-content: space-between;
@@ -97,9 +95,10 @@
                     width: 100%;
                     margin: 10px auto;
                     h3 {
+                      word-break: break-word;
                       font-size: 20px;
                       font-weight: 500;
-                      white-space: nowrap;
+
                       padding-bottom: 10px;
                       border-bottom: 2px solid black;
                     }

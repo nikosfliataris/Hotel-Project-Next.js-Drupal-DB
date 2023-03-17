@@ -1,9 +1,9 @@
 import style from "./Select.module.scss";
 function Select({ handleSelect, ...otherprops }) {
   return (
-    <>
-      {otherprops.label}
-      <select onChange={handleSelect}>
+    <div className={style.select_form}>
+      <span>{otherprops.label}</span>
+      <select onChange={handleSelect} className={style.select}>
         {otherprops.values?.map((info, i) => (
           <option
             key={i}
@@ -31,7 +31,7 @@ function Select({ handleSelect, ...otherprops }) {
           </option>
         ))}
       </select>
-    </>
+    </div>
   );
 }
 
