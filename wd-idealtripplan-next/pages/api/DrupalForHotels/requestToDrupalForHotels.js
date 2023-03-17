@@ -11,7 +11,6 @@ export default async function handler(req, res) {
       {
         method: req.method,
         body: stateBody,
-
         drupalType: true,
       },
       config

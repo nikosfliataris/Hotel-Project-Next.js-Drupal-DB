@@ -1,6 +1,5 @@
 import style from "./BookingDirectory.module.scss";
 import Form from "react-bootstrap/Form";
-import Spinner from "../Spinner/Spinner";
 function BookingDirectory({ HotelData, BookingConfirm, Key }) {
   return (
     <>

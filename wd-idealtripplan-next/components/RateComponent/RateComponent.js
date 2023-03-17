@@ -94,7 +94,15 @@ function RateComponent({ Images, rates, roomId, booking }) {
           </div>
         </div>
         <button
-          onClick={(e) => booking(e, SelectedKey)}
+          onClick={(e) =>
+            booking(
+              e,
+              SelectedKey,
+              rate[0].adults,
+              rates[0].children,
+              rates[0].paymentType
+            )
+          }
           className={`${style.booking_button} btn btn-secondary`}
         >
           Book Now
