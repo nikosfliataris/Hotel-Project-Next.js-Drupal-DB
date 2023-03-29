@@ -1,1 +1,1 @@
-# Hotel-Project-Next.js-Drupal-DB
+# Hotel-Project-Next.js and Drupal-DB
